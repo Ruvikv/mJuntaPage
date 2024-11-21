@@ -1,11 +1,11 @@
-/* importar fuente */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
 
-* {
+.border {
   box-sizing: border-box;
 }
 
-body {
+.custom {
   font-family: "Poppins", sans-serif;
   background: #f6f5f7;
   display: flex;
@@ -29,7 +29,7 @@ p {
   margin: 20px 0 30px;
 }
 
-span {
+.messageSpam {
   font-size: 12px;
 }
 
