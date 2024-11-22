@@ -47,6 +47,18 @@ const Sidebar = () => {
                     <span className='h6'>Bebidas</span>
                   </button>                  
                   </Link>
+                  <hr style={{ border: "1px solid gray" }} />
+                  <Link to="/adminbebidas">
+                  <button className="customMenuButton bo">
+                    <span className='h6'>Admin Bebidas</span>
+                  </button>                  
+                  </Link>
+                  <hr style={{ border: "1px solid gray" }} />
+                  <Link to="/adminusuarios">
+                  <button className="customMenuButton bo">
+                    <span className='h6'>Admin Usuarios</span>
+                  </button>                  
+                  </Link>
                 </div>
             </div>
             </div>
