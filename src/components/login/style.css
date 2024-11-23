@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
 
 .border {
@@ -53,9 +52,11 @@ a {
   width: 768px;
   max-width: 100%;
   min-height: 480px;
+  transition: transform 0.6s ease-in-out;
 }
 
-.form-container form {
+/* Paneles de formulario */
+.form-container {
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -64,15 +65,19 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
 }
 
 .social-container {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .social-container a {
   border-radius: 50%;
-  display: inline-flex;
+  display: inline;
   justify-content: center;
   align-items: center;
   margin: 0 5px;
@@ -119,23 +124,19 @@ button.ghost {
   border-color: #fff;
 }
 
-.form-container {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transition: all 0.6s ease-in-out;
-}
-
+/* Manejo de contenedores de los formularios */
 .sign-in-container {
   left: 0;
   width: 50%;
   z-index: 2;
+  transition: transform 0.6s ease-in-out;
 }
 
 .sign-up-container {
   left: 0;
   width: 50%;
   z-index: 1;
+  transition: transform 0.6s ease-in-out;
 }
 
 .overlay-container {
@@ -149,6 +150,7 @@ button.ghost {
   z-index: 100;
 }
 
+/* Overlay para las transiciones */
 .overlay {
   background: #ff416c;
   background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
@@ -158,9 +160,10 @@ button.ghost {
   height: 100%;
   width: 200%;
   transform: translateX(0);
-  transition: tranform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
+/* Paneles del overlay */
 .overlay-panel {
   position: absolute;
   top: 0;
@@ -183,29 +186,25 @@ button.ghost {
 
 .overlay-left {
   background: #be4bdb;
-  transition: translateX(-20%);
+  transform: translateX(-20%);
+  transition: transform 0.6s ease-in-out;
 }
 
-/* Animation */
-
-/* Move signin to the right */
+/* Animación de la transición entre los formularios */
 .container.right-panel-active .sign-in-container {
   transform: translateX(100%);
 }
 
-/* Move overlay to left */
 .container.right-panel-active .overlay-container {
   transform: translateX(-100%);
 }
 
-/* Bring sign up over sign in */
-.container.container.right-panel-active .sign-up-container {
+.container.right-panel-active .sign-up-container {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
 }
 
-/* Move overlay back to right */
 .container.right-panel-active .overlay {
   transform: translateX(50%);
 }
@@ -216,4 +215,39 @@ button.ghost {
 
 .container.right-panel-active .overlay-right {
   transform: translateX(20%);
+}
+
+
+.social-container {
+  display: flex;
+  justify-content: center; /* Centrar los iconos en el contenedor */
+  align-items: center; /* Alinear verticalmente */
+  margin: 10px 0;
+  flex-wrap: nowrap; /* Asegura que los iconos no se muevan a una nueva línea */
+}
+
+.social-container a {
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px; /* Espacio entre iconos */
+  height: 40px;
+  width: 40px;
+  font-size: 18px; /* Tamaño de los iconos */
+}
+
+/* En pantallas pequeñas (máximo 768px), los iconos se mantienen en línea */
+@media (max-width: 768px) {
+  .social-container {
+    flex-direction: row; /* Asegura que los iconos estén en una fila */
+    justify-content: center; /* Centra los iconos */
+    width: 100%;
+  }
+
+  .social-container a {
+    height: 35px;
+    width: 35px;
+    font-size: 16px; /* Ajustar el tamaño de los iconos */
+  }
 }

@@ -36,10 +36,10 @@ const LoginRegister = () => {
 
   return (
     <div className='custom'>
-      <div className="container border " id="container" ref={containerRef}>
+      <div className="container " id="container" ref={containerRef}>
         <div className="form-container sign-up-container ">
           <form action="#">
-            <h1>Crea tu Cuenta</h1>
+            <h5>Crea tu Cuenta</h5>
             <div className="social-container">
               <a href="#" className="social">
                 <i className="fab fa-facebook-f"><FacebookRoundedIcon fontSize='large'/></i>
@@ -57,10 +57,10 @@ const LoginRegister = () => {
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
 
-            <button className="button2-custom">
-                <span className="button-lg2-custom">
-                    <span className="button-sl2-custom"></span>
-                    <span className="button-text2-custom">Iniciar Sesion</span>
+            <button className="button-custom2">
+                <span className="button-lg-custom2">
+                    <span className="button-sl-custom2"></span>
+                    <span className="button-text-custom2">Iniciar Sesion</span>
                 </span>
             </button>
           
@@ -68,7 +68,7 @@ const LoginRegister = () => {
         </div>
         <div className="form-container sign-in-container">
           <form action="#">
-            <h1>Iniciar Sesión</h1>
+            <h5>Iniciar Sesión</h5>
             <div className="social-container">
               <a href="#" className="social">
                 <i className="fab fa-facebook-f"><FacebookRoundedIcon fontSize='large'/></i>

@@ -1,6 +1,6 @@
 import React from 'react'
-import './stylebuttonbar.css'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import './stylebarAdmin.css';
 
 const Sidebar = () => {
   return (

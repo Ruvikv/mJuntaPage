@@ -1,5 +1,5 @@
 import React from 'react';
-import SidebarAdmin from './sidebarAdmin.jsx';
+import SidebarAdmin from './sidebarAdmin/sidebarAdmin.jsx';
 
 const Layout = ({ children }) => (
     <div>

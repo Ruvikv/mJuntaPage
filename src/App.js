@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 //Layout
 import Layout from './components/layout/layout.jsx';
-import LayoutAdmin from './components/layout/layoutAdmin/layoutAdmin.jsx';
+import LayoutAdmin from './components/layout/layoutAdmin.jsx';
 
 //Rutas
 import Login from './components/login/loginRegister.jsx'
