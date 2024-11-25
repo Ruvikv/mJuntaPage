@@ -8,11 +8,25 @@ const Sidebar = () => {
         <nav className="navbar p-3 bg-dark">
             <div className="container-fluid">
 
-            <button className="btn-17 " type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-              <span className="text-container ">
-                <span className="text ">Menu</span>
-              </span>
-            </button>
+            <div style={{display: "flex", gap: "10px", alignitems: "center"}}>
+              <button className="btn-17" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                <span className="text-container">
+                  <span className="text">Menu</span>
+                </span>
+              </button>
+
+              <div>
+                <Link to="/home">
+                <button className="btn-17" type="button">
+                    <span className="text-container">
+                    <span className="text">Inicio</span>
+                    </span>
+                </button>
+                </Link>
+              </div>
+            </div>
+
+            
             
 
             <div className="card d-flex flex-row justify-content-around align-items-center p-3">
@@ -48,13 +62,13 @@ const Sidebar = () => {
                   </button>                  
                   </Link>
                   <hr style={{ border: "1px solid gray" }} />
-                  <Link to="/adminbebidas">
+                  <Link to="/bebidasAdmin">
                   <button className="customMenuButton bo">
                     <span className='h6'>Admin Bebidas</span>
                   </button>                  
                   </Link>
                   <hr style={{ border: "1px solid gray" }} />
-                  <Link to="/adminusuarios">
+                  <Link to="/userAdmin">
                   <button className="customMenuButton bo">
                     <span className='h6'>Admin Usuarios</span>
                   </button>                  
