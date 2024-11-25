@@ -8,11 +8,22 @@ const Sidebar = () => {
         <nav className="navbar p-3 bg-dark">
             <div className="container-fluid">
 
-            <button className="btn-17 " type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-              <span className="text-container ">
-                <span className="text ">Menu</span>
-              </span>
-            </button>
+            <div style={{display: "flex", gap: "10px", alignitems: "center"}}>
+              <button className="btn-17" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                <span className="text-container">
+                  <span className="text">Menu</span>
+                </span>
+              </button>
+
+
+              <button className="btn-17" type="button">
+                <Link to="/home">
+                  <span className="text-container">
+                    <span className="text">Inicio</span>
+                  </span>
+                </Link>
+              </button>
+            </div>
             
 
             <div className="card d-flex flex-row justify-content-around align-items-center p-3">

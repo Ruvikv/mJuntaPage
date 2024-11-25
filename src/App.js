@@ -29,6 +29,7 @@ function App() {
           <Route exact path="/home" element={<Layout> <Home /> </Layout>} />
           <Route exact path="/user" element={<Layout> <User /> </Layout>} />
           <Route exact path="/bebidas" element={<Layout> <Bebidas /> </Layout>} />
+          
 
 
           <Route exact path="/userAdmin" element={<LayoutAdmin> <UserAdmin/> </LayoutAdmin> } />

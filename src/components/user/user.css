@@ -1,0 +1,295 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f6d365;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+    }
+
+
+
+    
+
+    /* Botón base */
+.button-custom {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #be4bdb;
+    cursor: pointer;
+    position: relative;
+    padding: 6px 16px; /* Reducción de altura y aumento de longitud */
+    margin-bottom: 15px; /* Mantener el margen actual */
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px; /* Mantener tamaño de fuente actual */
+    transition: all 0.15s ease;
+    text-align: center;
+}
+
+/* Responsividad y ajuste en dispositivos pequeños */
+@media (max-width: 768px) {
+    .button-custom {
+        padding: 6px 18px; /* Ajuste de padding para tabletas */
+        font-size: 14px; /* Mantener tamaño de fuente en tabletas */
+    }
+}
+
+@media (max-width: 576px) {
+    .button-custom {
+        padding: 5px 14px; /* Más pequeño en pantallas más pequeñas */
+        font-size: 12px; /* Más pequeño el texto */
+        margin-bottom: 12px; /* Ajuste de margen */
+    }
+}
+
+/* Efectos del borde */
+.button-custom::before,
+.button-custom::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7d8082;
+    transition: all 0.15s ease;
+}
+
+.button-custom::before {
+    top: 0;
+    border-bottom-width: 0;
+}
+
+.button-custom::after {
+    bottom: 0;
+    border-top-width: 0;
+}
+
+/* Efecto al hacer clic */
+.button-custom:active::before,
+.button-custom:active::after {
+    right: 3px;
+    left: 3px;
+}
+
+.button-custom:active::before {
+    top: 3px;
+}
+
+.button-custom:active::after {
+    bottom: 3px;
+}
+
+/* Estilo interno del botón */
+.button-lg-custom {
+    position: relative;
+    display: block;
+    padding: 8px 20px; /* Ajuste de padding */
+    color: #fff;
+    background-color: #be4bdb;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+    transition: all 0.2s ease;
+}
+
+.button-lg-custom::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #be4bdb;
+}
+
+.button-lg-custom::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #be4bdb;
+    transition: all 0.2s ease;
+}
+
+/* Estilo del "slider" */
+.button-sl-custom {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: #ff4655;
+    transform: skew(-15deg);
+    transition: all 0.2s ease;
+}
+
+.button-text-custom {
+    position: relative;
+}
+
+/* Hover */
+.button-custom:hover {
+    color: #be4bdb;
+}
+
+.button-custom:hover .button-sl-custom {
+    width: calc(100% + 15px);
+}
+
+.button-custom:hover .button-lg-custom::after {
+    background-color: #fff;
+}
+
+
+
+
+
+/* boton 2 */
+/* Botón base */
+.button-custom2 {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #ff4655;
+    cursor: pointer;
+    position: relative;
+    padding: 6px 16px; /* Reducción de altura y aumento de longitud */
+    margin-bottom: 15px; /* Mantener el margen actual */
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px; /* Mantener tamaño de fuente actual */
+    transition: all 0.15s ease;
+    text-align: center;
+}
+
+/* Responsividad y ajuste en dispositivos pequeños */
+@media (max-width: 768px) {
+    .button-custom2 {
+        padding: 6px 18px; /* Ajuste de padding para tabletas */
+        font-size: 14px; /* Mantener tamaño de fuente en tabletas */
+    }
+}
+
+@media (max-width: 576px) {
+    .button-custom2 {
+        padding: 5px 14px; /* Más pequeño en pantallas más pequeñas */
+        font-size: 12px; /* Más pequeño el texto */
+        margin-bottom: 12px; /* Ajuste de margen */
+    }
+}
+
+/* Efectos del borde */
+.button-custom2::before,
+.button-custom2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7d8082;
+    transition: all 0.15s ease;
+}
+
+.button-custom2::before {
+    top: 0;
+    border-bottom-width: 0;
+}
+
+.button-custom2::after {
+    bottom: 0;
+    border-top-width: 0;
+}
+
+/* Efecto al hacer clic */
+.button-custom2:active::before,
+.button-custom2:active::after {
+    right: 3px;
+    left: 3px;
+}
+
+.button-custom2:active::before {
+    top: 3px;
+}
+
+.button-custom2:active::after {
+    bottom: 3px;
+}
+
+/* Estilo interno del botón */
+.button-lg-custom2 {
+    position: relative;
+    display: block;
+    padding: 8px 20px; /* Ajuste de padding */
+    color: #fff;
+    background-color: #ff4655;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+    transition: all 0.2s ease;
+}
+
+.button-lg-custom::before2 {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #be4bdb;
+}
+
+.button-lg-custom2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #be4bdb;
+    transition: all 0.2s ease;
+}
+
+/* Estilo del "slider" */
+.button-sl-custom2 {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: #be4bdb;
+    transform: skew(-15deg);
+    transition: all 0.2s ease;
+}
+
+.button-text-custom2 {
+    position: relative;
+}
+
+/* Hover */
+.button-custom2:hover {
+    color: #be4bdb;
+}
+
+.button-custom2:hover .button-sl-custom2 {
+    width: calc(100% + 15px);
+}
+
+.button-custom2:hover .button-lg-custom2::after {
+    background-color: #fff;
+}
