@@ -15,14 +15,15 @@ const Sidebar = () => {
                 </span>
               </button>
 
-
-              <button className="btn-17" type="button">
+              <div>
                 <Link to="/home">
-                  <span className="text-container">
+                <button className="btn-17" type="button">
+                    <span className="text-container">
                     <span className="text">Inicio</span>
-                  </span>
+                    </span>
+                </button>
                 </Link>
-              </button>
+              </div>
             </div>
             
 
