@@ -11,10 +11,61 @@ const BebidasAdmin = () => {
         <Tabs>
         {/* Lista de pestañas */}
         <TabList>
+          <Tab>Proveedor</Tab>
           <Tab>Agregar Betida Tipo</Tab>
           <Tab>Agregar Bebidas</Tab>
+          <Tab>Administrar Compra</Tab>
           <Tab>Administrar Ventas</Tab>
         </TabList>
+
+        {/* Panel para la pestaña proveedores */}
+        <TabPanel>
+          <h2>Proveedores</h2>
+          <ul class="list-group list-group-flush list-group-item-primary">
+            <li class="list-group-item">Diarco</li>
+            <li class="list-group-item">diarco sona zur 300</li>
+            <li class="list-group-item">2954443322</li>
+          </ul>
+          <Box
+            component="form"
+            sx={{
+              '& .MuiTextField-root': { m: 1, width: '25ch' },
+              display: 'flex',
+              flexDirection: 'column', 
+              alignItems: 'center', 
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <TextField
+              label="Nombre del Proveedor"
+              required
+              id="outlined-required"
+            />
+            <TextField
+              label="Direccion"
+              required
+              id="outlined-required"
+            />
+            <TextField
+              label="Telefono"
+              required
+              id="outlined-required"
+            />
+            <Button
+              variant="contained"
+              color="success"
+              sx={{
+                width: '150px',
+                mt: 2, 
+              }}
+            >
+              Guardar
+            </Button>
+          </Box>
+        </TabPanel>
+
+
 
         {/* Panel para la pestaña bebidas tipo */}
         <TabPanel>
@@ -27,13 +78,15 @@ const BebidasAdmin = () => {
             <li class="list-group-item">bebidas blancas</li>
           </ul>
           <Box component="form"
-          sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' } }}
+          sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' },
+              display: 'flex',
+              flexDirection: 'column', 
+              alignItems: 'center'}}
           noValidate
           autoComplete="off"
           >
             <div className='d-flex align-items-center'>
               <TextField
-                error
                 id="standard-error-helper-text"
                 label="Nueva Bebida Tipo"
                 helperText="Ingrese una bebida tipo."
@@ -58,29 +111,57 @@ const BebidasAdmin = () => {
             <li class="list-group-item">gaseosa manaos 1 litro stock: 10</li>
           </ul>
 
-          <div className='d-flex align-items-center mt-5'>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-          <Button className='mt-4' variant="contained" color="success">
-            Guardar
-          </Button>
+          <Box component="form"
+            sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' },
+                display: 'flex',
+                flexDirection: 'column', 
+                alignItems: 'center'}}
+            noValidate
+            autoComplete="off"
+            >
+            <div className='d-flex align-items-center mt-5 gap-3'>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Tipo</option>
+                <option value="1">Producto</option>
+                <option value="2">detalle</option>
+                <option value="3">stock</option>
+              </select>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Producto</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>detalle</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>stock</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <Button className='mt-4' variant="contained" color="success">
+              Guardar
+            </Button>
+          </Box>
+        </TabPanel>
+
+
+        {/* Panel para la pestaña compras */}
+        <TabPanel>
+          <h2>Compras</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+          </ul>
         </TabPanel>
 
         {/* Panel para la pestaña ventas */}
