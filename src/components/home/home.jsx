@@ -25,7 +25,7 @@ const Home = () => {
 
 
         
-        <div className='d-flex justify-content-center align-items-center gap-4'>
+        <div className='d-flex justify-content-center align-items-center gap-4 mt-4'>
             <div className="tarjeta">
                 <div className="card-img">
                 </div>
@@ -44,7 +44,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="tarjeta">
+            <div className="tarjeta ">
                 <div className="card-img">
                 </div>
                     <div className="card-info">
