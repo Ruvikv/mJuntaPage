@@ -1,41 +1,38 @@
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Suspense, lazy } from 'react';
 
-
-//Layout
-import Layout from './components/layout/layout.jsx';
-import LayoutAdmin from './components/layout/layoutAdmin.jsx';
-
-//Rutas
-import Login from './components/login/loginRegister.jsx'
-import Home from './components/home/home.jsx';
-import User from './components/user/user.jsx';
-import Bebidas from './components/bebidas/bebidas.jsx';
-
-//Rutas Administrador
-import UserAdmin from './components/user/userAdmin.jsx';
-import BebidasAdmin from './components/bebidas/bebidasAdmin.jsx';
-
+// Lazy Loading
+const Layout = lazy(() => import('./components/layout/layout.jsx'));
+const LayoutAdmin = lazy(() => import('./components/layout/layoutAdmin.jsx'));
+const Login = lazy(() => import('./components/login/loginRegister.jsx'));
+const Home = lazy(() => import('./components/home/home.jsx'));
+const User = lazy(() => import('./components/user/user.jsx'));
+const Bebidas = lazy(() => import('./components/bebidas/bebidas.jsx'));
+const UserAdmin = lazy(() => import('./components/user/userAdmin.jsx'));
+const BebidasAdmin = lazy(() => import('./components/bebidas/bebidasAdmin.jsx'));
 
 function App() {
   return (
     <Router>
-      <Routes>
+      <Suspense fallback={<div>Loading...</div>}>
 
-        <Route exact path="/" element={<Login />} />
+        <Routes>
+
+          <Route path="/" element={<Login />} />
+
+          <Route path="/home" element={<Layout> <Home /> </Layout>} />
+          <Route path="/user" element={<Layout> <User /> </Layout>} />
+          <Route path="/bebidas" element={<Layout> <Bebidas /> </Layout>} />
 
 
-          <Route exact path="/home" element={<Layout> <Home /> </Layout>} />
-          <Route exact path="/user" element={<Layout> <User /> </Layout>} />
-          <Route exact path="/bebidas" element={<Layout> <Bebidas /> </Layout>} />
-          
+          <Route path="/userAdmin" element={<LayoutAdmin> <UserAdmin /> </LayoutAdmin>} />
+          <Route path="/bebidasAdmin" element={<LayoutAdmin> <BebidasAdmin /> </LayoutAdmin>} />
+        
+        </Routes>
 
-
-          <Route exact path="/userAdmin" element={<LayoutAdmin> <UserAdmin/> </LayoutAdmin> } />
-          <Route exact path="/bebidasAdmin" element={ <LayoutAdmin> <BebidasAdmin/> </LayoutAdmin> } />
-      </Routes>
-      
+      </Suspense>
     </Router>
   );
 }
