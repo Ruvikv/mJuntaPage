@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './stylebuttonbar.css'
 import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
+  const [userRole, setUserRole] = useState('');
+
+  useEffect(() => {
+    const role = localStorage.getItem('userRole');
+    setUserRole(role);
+  }, []);
+
   return (
     <div>
-        <nav className="navbar p-3 bg-dark">
+        <nav className="navbar p-3 bg-black">
             <div className="container-fluid">
 
             <div style={{display: "flex", gap: "10px", alignitems: "center"}}>
@@ -59,6 +66,23 @@ const Sidebar = () => {
                     <span className='h6'>Bebidas</span>
                   </button>                  
                   </Link>
+                  <hr style={{ border: "1px solid gray" }} />
+                  
+                  {/* Mostrar solo si es administrador */}
+                  {userRole === 'administrador' && (
+                    <>
+                      <Link to="/bebidasAdmin">
+                        <button className="customMenuButton bo">
+                          <span className='h6'>Administrar Bebidas</span>
+                        </button>                  
+                      </Link>
+                      <Link to="/userAdmin">
+                        <button className="customMenuButton bo">
+                          <span className='h6'>Administrar Usuarios</span>
+                        </button>                  
+                      </Link>
+                    </>
+                    )}
                 </div>
             </div>
             </div>

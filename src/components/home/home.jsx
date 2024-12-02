@@ -1,5 +1,4 @@
 import React from 'react'
-import Imagen1 from '../../images/design-de-modelo.jpg';
 import './home.css';
 
 const Home = () => {
@@ -12,12 +11,12 @@ const Home = () => {
             <div >
                 <div >
                     <video
-                        src="https://cdn.pixabay.com/video/2022/09/17/131625-750753093_large.mp4"
+                        src="https://cdn.pixabay.com/video/2024/06/14/216671_tiny.mp4"
                         autoPlay
                         loop
                         muted
                         className="d-block w-100"
-                        style={{ objectFit: "cover", maxHeight: "500px" }}
+                        style={{ objectFit: "cover", maxHeight: "300px" }}
                     />
                 </div>
             </div>
